@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Hope Apostolic Ministries | Faith, Family & Community in Glenwood</title>
+    <meta name="description" content="Discover a welcoming community centered around faith, family, connection, and meaningful experiences for children, young people, and families in Glenwood, Illinois.">
+    <meta property="og:title" content="New Hope Apostolic Ministries | Glenwood, IL">
+    <meta property="og:description" content="A place where faith meets family, friendship & fun. Join us in Glenwood, Illinois.">
+    <meta property="og:type" content="website">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#14233B',
+                        cream: '#F7F3EA',
+                        yellowAccent: '#E9B949',
+                        tealAccent: '#3A8D8A',
+                        charcoal: '#20242A',
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                        editorial: ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,400&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        @keyframes floatSlow {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+        }
+        .animate-float {
+            animation: floatSlow 4s ease-in-out infinite;
+        }
+        .bg-grid-pattern {
+            background-image: radial-gradient(#14233B 0.75px, transparent 0.75px);
+            background-size: 24px 24px;
+        }
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F7F3EA;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #3A8D8A;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body class="bg-cream text-charcoal font-sans antialiased selection:bg-yellowAccent selection:text-navy">
+
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-cream/90 backdrop-blur-md border-b border-navy/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <!-- Logo -->
+            <a href="#home" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-navy flex items-center justify-center text-yellowAccent shadow-md transition-transform group-hover:scale-105">
+                    <i data-lucide="sparkles" class="w-5 h-5"></i>
+                </div>
+                <div>
+                    <span class="block font-extrabold text-navy tracking-tight text-lg leading-tight">NEW HOPE</span>
+                    <span class="block text-xs font-medium tracking-widest text-tealAccent">APOSTOLIC MINISTRIES</span>
+                </div>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-8 font-medium text-sm text-charcoal/80">
+                <a href="#home" class="hover:text-navy transition-colors">Home</a>
+                <a href="#leadership" class="hover:text-navy transition-colors">Leadership</a>
+                <a href="#ministry" class="hover:text-navy transition-colors">Our Ministry</a>
+                <a href="#kids" class="hover:text-navy transition-colors">Kids & Family</a>
+                <a href="#activities" class="hover:text-navy transition-colors">Activities</a>
+                <a href="#visit" class="hover:text-navy transition-colors">Visit Us</a>
+                <a href="#contact" class="hover:text-navy transition-colors">Contact</a>
+            </nav>
+
+            <!-- Right CTA & Mobile Toggle -->
+            <div class="hidden lg:flex items-center gap-4">
+                <a href="#visit" class="bg-navy hover:bg-navy/90 text-cream font-semibold px-5 py-2.5 rounded-full text-sm shadow-lg shadow-navy/10 transition-all hover:scale-105">
+                    Plan Your Visit
+                </a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-btn" class="lg:hidden p-2 text-navy focus:outline-none" aria-label="Toggle menu">
+                <i data-lucide="menu" class="w-6 h-6"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Drawer -->
+        <div id="mobile-menu" class="lg:hidden hidden bg-cream border-b border-navy/10 px-6 py-6 space-y-4 shadow-xl">
+            <a href="#home" class="block font-medium text-navy text-lg mobile-link">Home</a>
+            <a href="#leadership" class="block font-medium text-navy text-lg mobile-link">Leadership</a>
+            <a href="#ministry" class="block font-medium text-navy text-lg mobile-link">Our Ministry</a>
+            <a href="#kids" class="block font-medium text-navy text-lg mobile-link">Kids & Family</a>
+            <a href="#activities" class="block font-medium text-navy text-lg mobile-link">Activities</a>
+            <a href="#visit" class="block font-medium text-navy text-lg mobile-link">Visit Us</a>
+            <a href="#contact" class="block font-medium text-navy text-lg mobile-link">Contact</a>
+            <div class="pt-4 border-t border-navy/10">
+                <a href="#visit" class="block text-center bg-navy text-cream font-semibold py-3 rounded-full shadow-md mobile-link">
+                    Plan Your Visit
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="relative pt-32 pb-20 md:pt-40 md:pb-32 overflow-hidden bg-grid-pattern">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Text Content -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-yellowAccent/20 text-navy font-semibold text-xs tracking-wider uppercase border border-yellowAccent/30">
+                        <span>FAMILY</span>
+                        <span class="w-1.5 h-1.5 rounded-full bg-navy"></span>
+                        <span>COMMUNITY</span>
+                        <span class="w-1.5 h-1.5 rounded-full bg-navy"></span>
+                        <span>FAITH</span>
+                    </div>
+
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-navy tracking-tight leading-[1.1]">
+                        A Place Where Faith Meets Family, Friendship & <span class="text-tealAccent underline decoration-yellowAccent decoration-4 underline-offset-8">Fun.</span>
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-charcoal/80 leading-relaxed max-w-2xl font-normal">
+                        At New Hope Apostolic Ministries, we want every family to feel welcomed, every child to feel included, and every visitor to find a place where they can connect, grow, and enjoy being part of the community.
+                    </p>
+
+                    <!-- CTAs -->
+                    <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+                        <a href="#visit" class="inline-flex items-center justify-center gap-2 bg-navy hover:bg-navy/90 text-cream font-bold px-8 py-4 rounded-full shadow-xl shadow-navy/15 transition-all hover:translate-y-[-2px]">
+                            <span>Plan Your Visit</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#kids" class="inline-flex items-center justify-center gap-2 bg-tealAccent/10 hover:bg-tealAccent/20 text-navy font-bold px-8 py-4 rounded-full border border-tealAccent/30 transition-all">
+                            <span>Explore Kids & Family</span>
+                        </a>
+                    </div>
+
+                    <!-- Trust indicators / Quick pill -->
+                    <div class="pt-6 flex items-center gap-6 text-sm text-charcoal/70">
+                        <div class="flex items-center gap-2">
+                            <div class="w-8 h-8 rounded-full bg-yellowAccent/30 flex items-center justify-center text-navy font-bold">✓</div>
+                            <span>Welcoming Atmosphere</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <div class="w-8 h-8 rounded-full bg-tealAccent/20 flex items-center justify-center text-tealAccent font-bold">✓</div>
+                            <span>Activities for Kids & Youth</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Visual Composition -->
+                <div class="lg:col-span-5 relative">
+                    <div class="relative mx-auto max-w-md lg:max-w-none">
+                        <!-- Main Hero Image -->
+                        <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white aspect-[4/5]">
+                            <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&q=80&w=800" alt="Happy multi-generational family and youth community gathering" class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700" onerror="this.src='https://placehold.co/800x1000/14233B/F7F3EA?text=New+Hope+Community'">
+                        </div>
+
+                        <!-- Floating Activity Badge 1 -->
+                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-xl border border-charcoal/5 animate-float hidden sm:flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-xl bg-yellowAccent/20 text-navy flex items-center justify-center">
+                                <i data-lucide="film" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs font-bold text-tealAccent uppercase">Fun Events</span>
+                                <span class="block text-sm font-extrabold text-navy">Movie Nights & Gatherings</span>
+                            </div>
+                        </div>
+
+                        <!-- Floating Activity Badge 2 -->
+                        <div class="absolute -top-6 -right-6 bg-navy text-cream p-4 rounded-2xl shadow-xl hidden sm:flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-xl bg-yellowAccent text-navy flex items-center justify-center font-bold">
+                                <i data-lucide="users" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs text-yellowAccent font-medium">Glenwood, IL</span>
+                                <span class="block text-sm font-bold">130 E. Main Street</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-navy text-cream py-16 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-yellowAccent mb-4">Come As You Are. Find Your People.</h2>
+                <p class="text-cream/80 text-base sm:text-lg">We believe church should feel like home from the moment you step through our doors.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Value 1 -->
+                <div class="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm transition-all hover:bg-white/10">
+                    <div class="w-12 h-12 rounded-xl bg-yellowAccent text-navy flex items-center justify-center mb-6 font-bold">
+                        <i data-lucide="heart" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Welcoming</h3>
+                    <p class="text-cream/70 leading-relaxed text-sm">
+                        A place where families and visitors can feel at home, accepted, and genuinely cared for right from the start.
+                    </p>
+                </div>
+
+                <!-- Value 2 -->
+                <div class="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm transition-all hover:bg-white/10">
+                    <div class="w-12 h-12 rounded-xl bg-tealAccent text-white flex items-center justify-center mb-6 font-bold">
+                        <i data-lucide="users-2" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Connected</h3>
+                    <p class="text-cream/70 leading-relaxed text-sm">
+                        Build lasting friendships, share meals and activities, and become part of a genuine, supportive community.
+                    </p>
+                </div>
+
+                <!-- Value 3 -->
+                <div class="bg-white/5 border border-white/10 p-8 rounded-2xl backdrop-blur-sm transition-all hover:bg-white/10">
+                    <div class="w-12 h-12 rounded-xl bg-yellowAccent text-navy flex items-center justify-center mb-6 font-bold">
+                        <i data-lucide="trending-up" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Growing</h3>
+                    <p class="text-cream/70 leading-relaxed text-sm">
+                        Create opportunities to grow through faith, connection, and meaningful experiences for every member of the family.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="leadership" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-tealAccent/10 text-tealAccent font-semibold text-xs tracking-wider uppercase mb-4">
+                    LEADERSHIP & VISION
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy tracking-tight mb-4">
+                    Meet the Heart Behind the Ministry
+                </h2>
+                <p class="text-charcoal/80 text-base sm:text-lg">
+                    Martin Santellano has been connected with New Hope Apostolic Ministries in Glenwood, Illinois, serving the church community and helping create a welcoming environment where faith, family, and community can come together.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center bg-cream p-8 sm:p-12 rounded-3xl border border-navy/10 shadow-lg">
+                <!-- Left: Portrait Box with Requested Image -->
+                <div class="lg:col-span-5 relative">
+                    <div class="rounded-2xl overflow-hidden shadow-xl aspect-[4/5] border-4 border-white relative bg-navy/10 flex flex-col items-center justify-center text-center">
+                        <img src="https://raw.githubusercontent.com/CreativeTugsDotCom/989/refs/heads/main/Screenshot%202026-09-10%20040928.png" alt="Martin Santellano - New Hope Apostolic Ministries Leader" class="w-full h-full object-cover object-top" onerror="this.src='https://placehold.co/800x1000/14233B/F7F3EA?text=Martin+Santellano'">
+                        <div class="absolute bottom-0 inset-x-0 bg-gradient-to-t from-navy/90 via-navy/50 to-transparent p-6 text-left">
+                            <span class="block text-[10px] uppercase font-bold tracking-widest text-yellowAccent mb-0.5">NEW HOPE APOSTOLIC MINISTRIES</span>
+                            <h3 class="text-xl font-extrabold text-white">Martin Santellano</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Statement & Value Markers -->
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellowAccent/20 text-navy font-semibold text-xs uppercase">
+                        A Place for Families to Belong
+                    </div>
+
+                    <blockquote class="font-editorial italic text-2xl sm:text-3xl text-navy leading-snug">
+                        “Creating a place where families can connect, participate, and grow together.”
+                    </blockquote>
+
+                    <p class="text-charcoal/80 text-base leading-relaxed">
+                        For Martin, ministry is about more than gathering in one place. It is about creating meaningful connections, giving families a reason to participate, and making sure children and young people feel welcomed, included, and excited to be part of the community.
+                    </p>
+
+                    <!-- Three small value markers -->
+                    <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 border-t border-navy/10">
+                        <div>
+                            <span class="block font-bold text-navy text-sm uppercase text-tealAccent mb-1">FAITH</span>
+                            <span class="text-xs text-charcoal/70">A foundation for everyday life.</span>
+                        </div>
+                        <div>
+                            <span class="block font-bold text-navy text-sm uppercase text-tealAccent mb-1">FAMILY</span>
+                            <span class="text-xs text-charcoal/70">A place where every generation can belong.</span>
+                        </div>
+                        <div>
+                            <span class="block font-bold text-navy text-sm uppercase text-tealAccent mb-1">COMMUNITY</span>
+                            <span class="text-xs text-charcoal/70">Stronger relationships beyond the gathering.</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <a href="#visit" class="inline-flex items-center gap-2 bg-navy hover:bg-navy/90 text-cream font-bold px-8 py-3.5 rounded-full shadow-lg transition-all hover:scale-105 text-sm">
+                            <span>Meet Our Community</span>
+                            <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ministry" class="py-24 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Left Image Composition -->
+                <div class="lg:col-span-6 relative">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] border-4 border-white">
+                        <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&q=80&w=800" alt="Warm fellowship and community gathering at New Hope" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x600/3A8D8A/F7F3EA?text=Community+Fellowship'">
+                    </div>
+
+                    <!-- Overlapping Card -->
+                    <div class="absolute -bottom-8 right-6 bg-navy text-cream p-6 rounded-2xl shadow-xl max-w-xs border border-white/10">
+                        <div class="flex items-center gap-3 mb-2">
+                            <span class="w-3 h-3 rounded-full bg-yellowAccent"></span>
+                            <span class="text-xs uppercase tracking-wider font-semibold text-yellowAccent">Our Core Pillar</span>
+                        </div>
+                        <p class="font-editorial italic text-lg text-cream/90">
+                            “There should always be a place for your family at New Hope.”
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Right Text Content -->
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-tealAccent/10 text-tealAccent font-semibold text-xs tracking-wider uppercase">
+                        OUR MINISTRY
+                    </div>
+
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-navy tracking-tight">
+                        More Than a Place to Worship
+                    </h2>
+
+                    <p class="text-charcoal/80 text-base sm:text-lg leading-relaxed">
+                        New Hope Apostolic Ministries is a community where faith, family, and relationships come together. Led by a community committed to faith, family, and connection, our goal is to create an environment where people of different ages can connect, feel welcomed, and experience a sense of belonging.
+                    </p>
+
+                    <p class="text-charcoal/70 text-base leading-relaxed">
+                        For families, that means creating opportunities for children and young people to meet others, participate in activities, enjoy time together, and discover a community where faith can become part of everyday life.
+                    </p>
+
+                    <div class="grid grid-cols-3 gap-4 pt-4 border-t border-navy/10">
+                        <div>
+                            <span class="block text-2xl font-extrabold text-navy">Family</span>
+                            <span class="text-xs text-charcoal/60 font-medium">Welcoming all ages</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl font-extrabold text-tealAccent">Faith</span>
+                            <span class="text-xs text-charcoal/60 font-medium">Rooted in truth</span>
+                        </div>
+                        <div>
+                            <span class="block text-2xl font-extrabold text-yellowAccent">Community</span>
+                            <span class="text-xs text-charcoal/60 font-medium">Glenwood, IL</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="kids" class="py-24 bg-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-yellowAccent/20 text-navy font-semibold text-xs tracking-wider uppercase mb-4">
+                    KIDS & YOUTH EXPERIENCE
+                </div>
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-navy tracking-tight mb-4">
+                    Something for Every Family
+                </h2>
+                <p class="text-charcoal/80 text-base sm:text-lg">
+                    Church should be a place children look forward to — a place to connect, have fun, discover new friendships, and experience faith in a way that feels meaningful to them.
+                </p>
+            </div>
+
+            <!-- Activity Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                
+                <!-- Card 1: Movie Nights -->
+                <div class="bg-cream p-8 rounded-3xl border border-navy/10 hover:border-tealAccent transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-tealAccent/10 text-tealAccent flex items-center justify-center mb-6 group-hover:bg-tealAccent group-hover:text-white transition-all">
+                            <i data-lucide="film" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy mb-3">MOVIE NIGHTS</h3>
+                        <p class="text-charcoal/70 text-sm leading-relaxed">
+                            Time together, great stories, and a chance for families and friends to enjoy an evening together in a warm environment.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-navy/5 flex items-center justify-between text-xs font-bold text-tealAccent">
+                        <span>Family Friendly</span>
+                        <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2: Games & Activities -->
+                <div class="bg-cream p-8 rounded-3xl border border-navy/10 hover:border-yellowAccent transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-yellowAccent/20 text-navy flex items-center justify-center mb-6 group-hover:bg-yellowAccent group-hover:text-navy transition-all">
+                            <i data-lucide="gamepad-2" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy mb-3">GAMES & ACTIVITIES</h3>
+                        <p class="text-charcoal/70 text-sm leading-relaxed">
+                            Interactive experiences designed to get children and young people involved rather than simply sitting on the sidelines.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-navy/5 flex items-center justify-between text-xs font-bold text-navy">
+                        <span>Interactive Fun</span>
+                        <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                    </div>
+                </div>
+
+                <!-- Card 3: Family Gatherings -->
+                <div class="bg-cream p-8 rounded-3xl border border-navy/10 hover:border-tealAccent transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-tealAccent/10 text-tealAccent flex items-center justify-center mb-6 group-hover:bg-tealAccent group-hover:text-white transition-all">
+                            <i data-lucide="users" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy mb-3">FAMILY GATHERINGS</h3>
+                        <p class="text-charcoal/70 text-sm leading-relaxed">
+                            Opportunities for parents, children, and the wider church community to spend meaningful time together.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-navy/5 flex items-center justify-between text-xs font-bold text-tealAccent">
+                        <span>All Generations</span>
+                        <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                    </div>
+                </div>
+
+                <!-- Card 4: Youth Connection -->
+                <div class="bg-cream p-8 rounded-3xl border border-navy/10 hover:border-yellowAccent transition-all group flex flex-col justify-between">
+                    <div>
+                        <div class="w-14 h-14 rounded-2xl bg-yellowAccent/20 text-navy flex items-center justify-center mb-6 group-hover:bg-yellowAccent group-hover:text-navy transition-all">
+                            <i data-lucide="smile" class="w-7 h-7"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-navy mb-3">YOUTH CONNECTION</h3>
+                        <p class="text-charcoal/70 text-sm leading-relaxed">
+                            A welcoming environment where young people can build friendships, feel supported, and know they belong.
+                        </p>
+                    </div>
+                    <div class="pt-6 mt-6 border-t border-navy/5 flex items-center justify-between text-xs font-bold text-navy">
+                        <span>Belonging</span>
+                        <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- CTA banner below grid -->
+            <div class="mt-12 text-center">
+                <a href="#visit" class="inline-flex items-center gap-2 bg-navy hover:bg-navy/90 text-cream font-bold px-8 py-4 rounded-full shadow-lg transition-all hover:scale-105">
+                    <span>See What's Happening</span>
+                    <i data-lucide="calendar" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="visit" class="py-24 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-5 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-tealAccent/10 text-tealAccent font-semibold text-xs tracking-wider uppercase">
+                        FIRST-TIME VISITORS
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-navy tracking-tight">
+                        Your First Visit Should Feel Easy.
+                    </h2>
+                    <p class="text-charcoal/80 text-base leading-relaxed">
+                        We know visiting a new church for the first time can sometimes feel intimidating. That is why we make sure your experience is simple, warm, and stress-free from the moment you pull into the parking lot.
+                    </p>
+                    <div class="pt-4">
+                        <a href="#contact" class="inline-flex items-center gap-2 bg-navy hover:bg-navy/90 text-cream font-bold px-8 py-4 rounded-full shadow-lg transition-all hover:scale-105">
+                            <span>Plan Your Visit</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 3-Step Journey -->
+                <div class="lg:col-span-7 space-y-6">
+                    
+                    <!-- Step 1 -->
+                    <div class="bg-white p-6 sm:p-8 rounded-3xl border border-navy/10 shadow-sm flex items-start gap-6">
+                        <div class="w-12 h-12 rounded-2xl bg-navy text-yellowAccent flex items-center justify-center font-extrabold text-lg flex-shrink-0">
+                            01
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-navy mb-2">Come As You Are</h3>
+                            <p class="text-charcoal/70 text-sm sm:text-base leading-relaxed">
+                                No complicated expectations or dress codes. Just come ready to meet wonderful people and experience a welcoming community.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="bg-white p-6 sm:p-8 rounded-3xl border border-navy/10 shadow-sm flex items-start gap-6">
+                        <div class="w-12 h-12 rounded-2xl bg-tealAccent text-white flex items-center justify-center font-extrabold text-lg flex-shrink-0">
+                            02
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-navy mb-2">Meet the Community</h3>
+                            <p class="text-charcoal/70 text-sm sm:text-base leading-relaxed">
+                                Connect with friendly people who will help you find your seat, answer your questions, and show your children where the fun activities are.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="bg-white p-6 sm:p-8 rounded-3xl border border-navy/10 shadow-sm flex items-start gap-6">
+                        <div class="w-12 h-12 rounded-2xl bg-yellowAccent text-navy flex items-center justify-center font-extrabold text-lg flex-shrink-0">
+                            03
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-navy mb-2">Get Involved</h3>
+                            <p class="text-charcoal/70 text-sm sm:text-base leading-relaxed">
+                                Explore activities, gatherings, movie nights, and opportunities that interest you and your children as you settle into the family.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-navy tracking-tight mb-4">
+                    Why Families Choose Community
+                </h2>
+                <p class="text-charcoal/80 text-base sm:text-lg">
+                    We focus on what matters most: authentic relationships, genuine care, and a place to belong.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Benefit 1 -->
+                <div class="bg-cream p-8 rounded-3xl border border-navy/5">
+                    <div class="w-12 h-12 rounded-xl bg-yellowAccent/30 text-navy flex items-center justify-center mb-6 font-bold">
+                        <i data-lucide="shield-check" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-navy mb-2">A Welcoming Environment</h3>
+                    <p class="text-charcoal/70 text-sm leading-relaxed">
+                        Everyone deserves to feel seen, valued, and welcomed from the very first moment.
+                    </p>
+                </div>
+
+                <!-- Benefit 2 -->
+                <div class="bg-cream p-8 rounded-3xl border border-navy/5">
+                    <div class="w-12 h-12 rounded-xl bg-tealAccent/20 text-tealAccent flex items-center justify-center mb-6 font-bold">
+                        <i data-lucide="heart-handshake" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-navy mb-2">Family-Friendly Experiences</h3>
+                    <p class="text-charcoal/70 text-sm leading-relaxed">
+                        Create opportunities where children and parents can participate and enjoy time together.
+                    </p>
+                </div>
+
+                <!-- Benefit 3 -->
+                <div class="bg-cream p-8 rounded-3xl border border-navy/5">
+                    <div class="w-12 h-12 rounded-xl bg-yellowAccent/30 text-navy flex items-center justify-center mb-6 font-bold">
+                        <i data-lucide="globe" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-navy mb-2">Real Community</h3>
+                    <p class="text-charcoal/70 text-sm leading-relaxed">
+                        Build relationships and friendships that extend far beyond a single Sunday service.
+                    </p>
+                </div>
+
+                <!-- Benefit 4 -->
+                <div class="bg-cream p-8 rounded-3xl border border-navy/5">
+                    <div class="w-12 h-12 rounded-xl bg-tealAccent/20 text-tealAccent flex items-center justify-center mb-6 font-bold">
+                        <i data-lucide="sparkle" class="w-6 h-6"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-navy mb-2">Faith With Purpose</h3>
+                    <p class="text-charcoal/70 text-sm leading-relaxed">
+                        Make faith meaningful through relationships, service, growth, and everyday life.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-navy text-cream relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-yellowAccent text-xs uppercase tracking-widest font-semibold block mb-2">COMMUNITY STORIES</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">A Community Worth Coming Back To</h2>
+                <p class="text-cream/70 text-sm sm:text-base mt-3">Demo placeholders representing the family and youth experience at New Hope.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Testimonial 1 -->
+                <div class="bg-white/5 border border-white/10 p-8 rounded-3xl backdrop-blur-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-yellowAccent mb-6">
+                            ★★★★★
+                        </div>
+                        <p class="font-editorial italic text-lg text-cream/90 leading-relaxed mb-6">
+                            “Placeholder testimonial for the website mockup — replace with a genuine family story or member testimonial about how much their children enjoy the activities.”
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-6 border-t border-white/10">
+                        <div class="w-10 h-10 rounded-full bg-tealAccent text-white flex items-center justify-center font-bold text-sm">
+                            LP
+                        </div>
+                        <div>
+                            <span class="block font-bold text-white text-sm">Local Parent</span>
+                            <span class="block text-xs text-cream/60">New Hope Family</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="bg-white/5 border border-white/10 p-8 rounded-3xl backdrop-blur-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-yellowAccent mb-6">
+                            ★★★★★
+                        </div>
+                        <p class="font-editorial italic text-lg text-cream/90 leading-relaxed mb-6">
+                            “Placeholder testimonial for the website mockup — young people find a welcoming atmosphere here where they can connect and feel truly valued.”
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-6 border-t border-white/10">
+                        <div class="w-10 h-10 rounded-full bg-yellowAccent text-navy flex items-center justify-center font-bold text-sm">
+                            YA
+                        </div>
+                        <div>
+                            <span class="block font-bold text-white text-sm">Young Adult</span>
+                            <span class="block text-xs text-cream/60">Church Community</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="bg-white/5 border border-white/10 p-8 rounded-3xl backdrop-blur-sm flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-yellowAccent mb-6">
+                            ★★★★★
+                        </div>
+                        <p class="font-editorial italic text-lg text-cream/90 leading-relaxed mb-6">
+                            “Placeholder testimonial for the website mockup — visiting for the first time felt easy and warm, and our kids are already asking when we go back.”
+                        </p>
+                    </div>
+                    <div class="flex items-center gap-4 pt-6 border-t border-white/10">
+                        <div class="w-10 h-10 rounded-full bg-tealAccent text-white flex items-center justify-center font-bold text-sm">
+                            FV
+                        </div>
+                        <div>
+                            <span class="block font-bold text-white text-sm">Family Visitor</span>
+                            <span class="block text-xs text-cream/60">Glenwood Visitor</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="activities" class="py-24 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <div class="lg:col-span-6 space-y-6">
+                    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-tealAccent/10 text-tealAccent font-semibold text-xs tracking-wider uppercase">
+                        CONNECT & ENGAGE
+                    </div>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-navy tracking-tight">
+                        There’s More Than One Way to Connect
+                    </h2>
+                    <p class="text-charcoal/80 text-base leading-relaxed">
+                        Whether through movie nights, interactive youth gatherings, or family fellowship, New Hope Apostolic Ministries offers meaningful ways for everyone to participate.
+                    </p>
+
+                    <!-- Bullet badges -->
+                    <div class="grid grid-cols-2 gap-4 pt-2">
+                        <div class="flex items-center gap-3 bg-white p-4 rounded-2xl border border-navy/5">
+                            <span class="w-2.5 h-2.5 rounded-full bg-tealAccent"></span>
+                            <span class="font-bold text-navy text-sm">Community Events</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-white p-4 rounded-2xl border border-navy/5">
+                            <span class="w-2.5 h-2.5 rounded-full bg-yellowAccent"></span>
+                            <span class="font-bold text-navy text-sm">Youth Activities</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-white p-4 rounded-2xl border border-navy/5">
+                            <span class="w-2.5 h-2.5 rounded-full bg-yellowAccent"></span>
+                            <span class="font-bold text-navy text-sm">Family Gatherings</span>
+                        </div>
+                        <div class="flex items-center gap-3 bg-white p-4 rounded-2xl border border-navy/5">
+                            <span class="w-2.5 h-2.5 rounded-full bg-tealAccent"></span>
+                            <span class="font-bold text-navy text-sm">Faith & Fellowship</span>
+                        </div>
+                    </div>
+
+                    <div class="pt-4">
+                        <a href="#contact" class="inline-flex items-center gap-2 bg-navy hover:bg-navy/90 text-cream font-bold px-8 py-4 rounded-full shadow-lg transition-all hover:scale-105">
+                            <span>Find Your Place</span>
+                            <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="lg:col-span-6">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <div class="rounded-3xl overflow-hidden shadow-xl aspect-[4/5] border-2 border-white">
+                                <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&q=80&w=600" alt="Youth community connecting" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x750/14233B/F7F3EA?text=Youth+Group'">
+                            </div>
+                        </div>
+                        <div class="space-y-4 pt-8">
+                            <div class="rounded-3xl overflow-hidden shadow-xl aspect-[4/5] border-2 border-white">
+                                <img src="https://images.unsplash.com/photo-1511895426328-dc8714191300?auto=format&fit=crop&q=80&w=600" alt="Family and children activities" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/600x750/3A8D8A/F7F3EA?text=Family+Fun'">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 bg-yellowAccent text-navy relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight mb-6">
+                Ready to Bring Your Family?
+            </h2>
+            <p class="text-navy/80 text-lg sm:text-xl max-w-2xl mx-auto mb-10 font-medium">
+                Whether you're looking for a welcoming church community, meaningful experiences for your children, or simply a place to connect with others, New Hope is a place to start.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#visit" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-navy hover:bg-navy/90 text-cream font-bold px-8 py-4 rounded-full shadow-2xl transition-all hover:scale-105">
+                    <span>Plan Your Visit</span>
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+                <a href="#contact" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/40 hover:bg-white/60 text-navy font-bold px-8 py-4 rounded-full border border-navy/20 transition-all">
+                    <span>Get In Touch</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Left Column: Info & Address -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-yellowAccent/20 text-navy font-semibold text-xs tracking-wider uppercase mb-4">
+                            VISIT & CONNECT
+                        </div>
+                        <h2 class="text-3xl sm:text-4xl font-extrabold text-navy tracking-tight mb-4">
+                            Come Visit Us
+                        </h2>
+                        <p class="text-charcoal/80 text-base leading-relaxed">
+                            Have a question before your visit? We'd love to hear from you and welcome your family.
+                        </p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <!-- Address -->
+                        <div class="flex items-start gap-4 bg-cream p-6 rounded-2xl border border-navy/5">
+                            <div class="w-10 h-10 rounded-xl bg-navy text-yellowAccent flex items-center justify-center flex-shrink-0 font-bold">
+                                <i data-lucide="map-pin" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-navy mb-1">New Hope Apostolic Ministries</h3>
+                                <p class="text-charcoal/70 text-sm">130 E. Main Street<br>Glenwood, IL 60425</p>
+                            </div>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="flex items-start gap-4 bg-cream p-6 rounded-2xl border border-navy/5">
+                            <div class="w-10 h-10 rounded-xl bg-tealAccent text-white flex items-center justify-center flex-shrink-0 font-bold">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-navy mb-1">Phone Numbers</h3>
+                                <p class="text-charcoal/70 text-sm">Primary: <a href="tel:7082485232" class="font-semibold text-navy hover:underline">708-248-5232</a></p>
+                                <p class="text-charcoal/70 text-sm">Secondary: <a href="tel:7087692838" class="font-semibold text-navy hover:underline">708-769-2838</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map Placeholder visual -->
+                    <div class="rounded-2xl overflow-hidden border border-navy/10 bg-navy/5 p-4 text-center">
+                        <div class="aspect-[16/9] rounded-xl overflow-hidden relative flex items-center justify-center bg-navy text-cream">
+                            <div class="absolute inset-0 opacity-25 bg-grid-pattern"></div>
+                            <div class="relative z-10 p-4">
+                                <i data-lucide="map" class="w-10 h-10 text-yellowAccent mx-auto mb-2"></i>
+                                <span class="block font-bold text-sm">130 E. Main Street, Glenwood, IL 60425</span>
+                                <span class="block text-xs text-cream/70 mt-1">Convenient parking & welcoming atmosphere</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Contact Form -->
+                <div class="lg:col-span-7 bg-cream p-8 sm:p-12 rounded-3xl border border-navy/10 shadow-lg">
+                    <h3 class="text-2xl font-bold text-navy mb-2">Send Us a Message</h3>
+                    <p class="text-charcoal/70 text-sm mb-8">Fill out the form below and someone from our leadership team will get back to you shortly.</p>
+
+                    <form id="contact-form" class="space-y-6" onsubmit="event.preventDefault(); showSuccessMessage();">
+                        <div>
+                            <label for="name" class="block text-xs font-bold uppercase tracking-wider text-navy mb-2">Your Name</label>
+                            <input type="text" id="name" required class="w-full bg-white border border-navy/10 rounded-xl px-4 py-3.5 text-charcoal focus:outline-none focus:border-tealAccent transition-colors" placeholder="Enter your full name">
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-xs font-bold uppercase tracking-wider text-navy mb-2">Email Address</label>
+                            <input type="email" id="email" required class="w-full bg-white border border-navy/10 rounded-xl px-4 py-3.5 text-charcoal focus:outline-none focus:border-tealAccent transition-colors" placeholder="your.email@example.com">
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-xs font-bold uppercase tracking-wider text-navy mb-2">Your Message</label>
+                            <textarea id="message" rows="4" required class="w-full bg-white border border-navy/10 rounded-xl px-4 py-3.5 text-charcoal focus:outline-none focus:border-tealAccent transition-colors" placeholder="How can we help your family or answer your questions?"></textarea>
+                        </div>
+
+                        <button type="submit" class="w-full bg-navy hover:bg-navy/90 text-cream font-bold py-4 rounded-xl shadow-lg transition-all hover:scale-[1.01]">
+                            Send a Message
+                        </button>
+
+                        <div id="form-success" class="hidden bg-tealAccent/20 text-tealAccent border border-tealAccent/30 p-4 rounded-xl text-sm font-semibold text-center">
+                            Thank you! Your message has been sent successfully. We will be in touch soon.
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-navy text-cream text-center border-t border-white/10">
+        <div class="max-w-4xl mx-auto px-4 space-y-4">
+            <h3 class="text-2xl sm:text-3xl font-bold text-yellowAccent">Your Family Has a Place Here.</h3>
+            <p class="text-cream/80 text-sm sm:text-base">Connect. Participate. Grow together.</p>
+            <div class="pt-2">
+                <a href="#visit" class="inline-flex items-center gap-2 bg-yellowAccent hover:bg-yellowAccent/90 text-navy font-bold px-8 py-3.5 rounded-full shadow-lg transition-all hover:scale-105">
+                    <span>Plan Your Visit</span>
+                    <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#0e1726] text-cream/70 py-16 border-t border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                
+                <!-- Col 1 -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 rounded-lg bg-navy flex items-center justify-center text-yellowAccent">
+                            <i data-lucide="sparkles" class="w-4 h-4"></i>
+                        </div>
+                        <span class="font-extrabold text-white text-base tracking-tight">NEW HOPE</span>
+                    </div>
+                    <p class="text-xs text-cream/60 leading-relaxed">
+                        New Hope Apostolic Ministries<br>Glenwood, Illinois<br>Serving the community with faith, family, and connection.
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <span class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors cursor-pointer text-white text-xs">f</span>
+                        <span class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors cursor-pointer text-white text-xs">ig</span>
+                        <span class="w-8 h-8 rounded-full bg-white/5 flex items-center justify-center hover:bg-white/10 transition-colors cursor-pointer text-white text-xs">yt</span>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Explore</h4>
+                    <ul class="space-y-2.5 text-xs">
+                        <li><a href="#home" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="#leadership" class="hover:text-white transition-colors">Leadership</a></li>
+                        <li><a href="#ministry" class="hover:text-white transition-colors">Our Ministry</a></li>
+                        <li><a href="#kids" class="hover:text-white transition-colors">Kids & Family</a></li>
+                        <li><a href="#activities" class="hover:text-white transition-colors">Activities</a></li>
+                        <li><a href="#visit" class="hover:text-white transition-colors">Visit Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Connect</h4>
+                    <ul class="space-y-2.5 text-xs">
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact Us</a></li>
+                        <li><a href="tel:7082485232" class="hover:text-white transition-colors">708-248-5232</a></li>
+                        <li><a href="tel:7087692838" class="hover:text-white transition-colors">708-769-2838</a></li>
+                        <li><a href="#visit" class="hover:text-white transition-colors font-semibold text-yellowAccent">Plan Your Visit</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="text-white font-bold text-sm uppercase tracking-wider mb-4">Visit Location</h4>
+                    <p class="text-xs text-cream/70 leading-relaxed mb-4">
+                        130 E. Main Street<br>Glenwood, IL 60425
+                    </p>
+                    <div class="inline-block bg-tealAccent/20 text-tealAccent px-3 py-1.5 rounded-lg text-xs font-semibold">
+                        Open & Welcoming All
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between text-xs text-cream/50 gap-4">
+                <p>© 2026 New Hope Apostolic Ministries. All rights reserved. Sales Demo Mockup for Martin Santellano.</p>
+                <div class="flex items-center gap-6">
+                    <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+                    <a href="#" class="hover:text-white transition-colors">Terms</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileLinks = document.querySelectorAll('.mobile-link');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('header');
+            if (window.scrollY > 40) {
+                header.classList.add('shadow-md', 'bg-cream/95');
+            } else {
+                header.classList.remove('shadow-md', 'bg-cream/90');
+            }
+        });
+
+        // Form success message handler
+        function showSuccessMessage() {
+            const form = document.getElementById('contact-form');
+            const successDiv = document.getElementById('form-success');
+            form.reset();
+            successDiv.classList.remove('hidden');
+            setTimeout(() => {
+                successDiv.classList.add('hidden');
+            }, 6000);
+        }
+    </script>
+</body>
+</html>
